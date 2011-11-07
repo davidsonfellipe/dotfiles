@@ -35,3 +35,4 @@
 	ps = push
 	pl = pull
 	amend = commit --amend -C HEAD
+	ll   = log --pretty=oneline --decorate --abbrev-commit --max-count=15
