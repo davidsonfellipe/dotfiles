@@ -25,7 +25,7 @@
 	editor = mate -w
 [alias]
 	st = status
-	ci = commit
+	ci = commit -m
 	br = branch
 	df = diff
 	lg = log -pgit ps
