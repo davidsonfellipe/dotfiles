@@ -1,0 +1,37 @@
+echo ' __    __    __  __          _____     ______     ______   ______   __     __         ______     ______    '
+echo '/\ "-./  \  /\ \_\ \        /\  __-.  /\  __ \   /\__  _\ /\  ___\ /\ \   /\ \       /\  ___\   /\  ___\   '
+echo '\ \ \-./\ \ \ \____ \       \ \ \/\ \ \ \ \/\ \  \/_/\ \/ \ \  __\ \ \ \  \ \ \____  \ \  __\   \ \___  \  '
+echo ' \ \_\ \ \_\ \/\_____\       \ \____-  \ \_____\    \ \_\  \ \_\    \ \_\  \ \_____\  \ \_____\  \/\_____\ '
+echo '  \/_/  \/_/  \/_____/        \/____/   \/_____/     \/_/   \/_/     \/_/   \/_____/   \/_____/   \/_____/ '
+echo '                                                                                                            '
+
+# .gitconfig
+if [ -f ".gitconfig" ]; then
+	echo "==> Updating .gitconfig... OK"
+	cp .gitconfig ~/.gitconfig
+fi
+
+# homebrew
+if which brew &> /dev/null; then
+	echo "==> Checking Homebrew... OK"
+else
+	echo "==> Installing Homebrew (https://github.com/mxcl/homebrew/wiki/installation)..."
+	/usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+	echo "==> OK"
+fi
+
+# nodejs
+if which node &> /dev/null; then
+	echo "==> Checking node... OK"
+else
+	echo "==> Installing node (git clone git://github.com/ry/node.git)..."
+	brew install node
+	echo "==> OK"
+fi
+
+# .profile
+if [ -f ".profile" ]; then
+	echo "==> Updating .profile... OK"
+	cp .profile ~/.profile
+	echo "==> Now type: source: ~/.profile"
+fi
