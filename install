@@ -29,6 +29,34 @@ else
 	echo "==> OK"
 fi
 
+# npm
+if which npm &> /dev/null; then
+	echo "==> Checking npm... OK"
+else
+	echo "==> Installing npm (curl http://npmjs.org/install.sh | sh)..."
+	curl https://npmjs.org/install.sh -k | sh
+	export PATH="/usr/local/share/npm/bin:${PATH}"
+	echo "==> OK"
+fi
+
+# jshint
+if which jshint &> /dev/null; then
+	echo "==> Checking jshint... OK"
+else
+	echo "==> Installing jshint (sudo npm install jshint -g)..."
+	sudo npm install jshint -g
+	echo "==> OK"
+fi
+
+# csslint
+if which csslint &> /dev/null; then
+	echo "==> Checking csslint... OK"
+else
+	echo "==> Installing csslint (sudo npm install -g csslint)..."
+	sudo npm install -g csslint
+	echo "==> OK"
+fi
+
 # .profile
 if [ -f ".profile" ]; then
 	echo "==> Updating .profile... OK"
