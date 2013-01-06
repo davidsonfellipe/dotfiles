@@ -13,7 +13,7 @@ fi
 
 # homebrew
 if which brew &> /dev/null; then
-	echo "==> Checking Homebrew... OK"
+	echo "==> Checking homebrew... OK"
 else
 	echo "==> Installing Homebrew (https://github.com/mxcl/homebrew/wiki/installation)..."
 	/usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
