@@ -13,7 +13,7 @@ PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1
 # general
 alias ls="ls -G"   
 alias la='ls -la'
-alias ll5='ls -l'
+alias ll='ls -l'
 alias cl='clear'
 alias home='cd ~'
 alias rt='reset'
@@ -42,6 +42,9 @@ alias specjs='rake spec:javascript'
 # python
 alias site-packages-2.6='cd /opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages'  
 alias pyclean='find . -name "*.pyc" -exec rm {} \;'
+
+#npm
+export PATH="/usr/local/share/npm/bin:${PATH}"
 
 # processes
 alias tm='top -o vsize' # memory

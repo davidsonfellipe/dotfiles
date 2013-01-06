@@ -35,7 +35,6 @@ if which npm &> /dev/null; then
 else
 	echo "==> Installing npm (curl http://npmjs.org/install.sh | sh)..."
 	curl https://npmjs.org/install.sh -k | sh
-	export PATH="/usr/local/share/npm/bin:${PATH}"
 	echo "==> OK"
 fi
 
