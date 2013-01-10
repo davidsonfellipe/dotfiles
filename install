@@ -56,16 +56,16 @@ else
 	echo "==> OK"
 fi
 
-# .profile
-if [ -f ".profile" ]; then
-	echo "==> Updating .profile... OK"
-	cp .profile ~/.profile
-	echo "==> Now type: source: ~/.profile"
-fi
-
 # update gems
 if which gem &> /dev/null; then
 	echo "==> Checking gem... OK"
 	sudo gem update --system
 	echo "==> Updating gem... OK"
+fi
+
+# .profile
+if [ -f ".profile" ]; then
+	echo "==> Updating .profile... OK"
+	cp .profile ~/.profile
+	echo "==> Now type: source: ~/.profile"
 fi
