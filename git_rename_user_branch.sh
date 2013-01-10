@@ -1,5 +1,5 @@
 #!/bin/sh
- 
+#refs: https://help.github.com/articles/changing-author-info
 git filter-branch --env-filter '
  
 an="$GIT_AUTHOR_NAME"
