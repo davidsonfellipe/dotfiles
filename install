@@ -88,6 +88,15 @@ else
 	echo "==> OK"
 fi
 
+# mongo
+if which mongod &> /dev/null; then
+	echo "==> Checking mongodb... OK"
+else
+	echo "==> Installing mongodb (brew install mongodb)..."
+	brew install mongodb
+	echo "==> OK"
+fi
+
 # .profile
 if [ -f ".profile" ]; then
 	echo "==> Updating .profile... OK"
