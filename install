@@ -79,6 +79,15 @@ if which gem &> /dev/null; then
 	echo "==> Updating gem... OK"
 fi
 
+# capistrano
+if which cap &> /dev/null; then
+	echo "==> Checking capistrano... OK"
+else
+	echo "==> Installing capistrano (gem install capistrano)..."
+	sudo gem install capistrano
+	echo "==> OK"
+fi
+
 # .profile
 if [ -f ".profile" ]; then
 	echo "==> Updating .profile... OK"
