@@ -11,6 +11,13 @@ if [ -f ".gitconfig" ]; then
 	cp .gitconfig ~/.gitconfig
 fi
 
+# .gitignore_global
+if [ -f ".gitignore_global" ]; then
+    echo "==> Updating .gitignore_global... OK"
+    cp .gitignore_global ~/.gitignore_global
+    git config --global core.excludesfile ~/.gitignore_global
+fi
+
 # homebrew
 if which brew &> /dev/null; then
 	echo "==> Checking homebrew... OK"
