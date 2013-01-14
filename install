@@ -38,6 +38,15 @@ else
 	echo "==> OK"
 fi
 
+# docpad
+if which docpad &> /dev/null; then
+	echo "==> Checking docpad... OK"
+else
+	echo "==> Installing docpad (sudo npm install -fg docpad@6.20 | sh)..."
+	sudo npm install -fg docpad@6.20
+	echo "==> OK"
+fi
+
 # jshint
 if which jshint &> /dev/null; then
 	echo "==> Checking jshint... OK"
