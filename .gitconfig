@@ -21,8 +21,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[core]
-	editor = mate -w
 [alias]
 	st = status
 	ci = commit -m
