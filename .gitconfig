@@ -32,6 +32,7 @@
 	pom = push origin master
 	ps = push
 	pl = pull
+	pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
 	amend = commit --amend -C HEAD
 	ll   = log --pretty=oneline --decorate --abbrev-commit --max-count=15
 	rn = log -M
