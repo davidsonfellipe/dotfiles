@@ -1,105 +1,119 @@
-echo ' __    __    __  __          _____     ______     ______   ______   __     __         ______     ______    '
-echo '/\ "-./  \  /\ \_\ \        /\  __-.  /\  __ \   /\__  _\ /\  ___\ /\ \   /\ \       /\  ___\   /\  ___\   '
-echo '\ \ \-./\ \ \ \____ \       \ \ \/\ \ \ \ \/\ \  \/_/\ \/ \ \  __\ \ \ \  \ \ \____  \ \  __\   \ \___  \  '
-echo ' \ \_\ \ \_\ \/\_____\       \ \____-  \ \_____\    \ \_\  \ \_\    \ \_\  \ \_____\  \ \_____\  \/\_____\ '
-echo '  \/_/  \/_/  \/_____/        \/____/   \/_____/     \/_/   \/_/     \/_/   \/_____/   \/_____/   \/_____/ '
-echo '                                                                                                            '
+# Notice title
+# function print { echo  "\033[1;32m=> $1\033[0m"; }
+function msg_checking { echo  "\033[1;32m==> $1 ✔\033[0m"; }
+function msg_installing { echo  "\033[1;33m==> Updating $1 ✔\033[0m"; }
+function msg_install { echo  "\033[1;33m==> Installing $1: $ $2\033[0m"; }
+function msg_ok { echo  "\033[1;32m==> $1 installed ✔\033[0m"; }
+function msg { echo  "\033[0;32m$1\033[0m"; }
+function msg_alert { echo "\033[1;31m✖ $1 ✖\033[0m"; }
+
+# Error title
+# function error { echo "\033[1;31m=> Error: $1 ✖\033[0m"; }
+
+
+msg ' __    __    __  __          _____     ______     ______   ______   __     __         ______     ______    '
+msg '/\ "-./  \  /\ \_\ \        /\  __-.  /\  __ \   /\__  _\ /\  ___\ /\ \   /\ \       /\  ___\   /\  ___\   '
+msg '\ \ \-./\ \ \ \____ \       \ \ \/\ \ \ \ \/\ \  \/_/\ \/ \ \  __\ \ \ \  \ \ \____  \ \  __\   \ \___  \  '
+msg ' \ \_\ \ \_\ \/\_____\       \ \____-  \ \_____\    \ \_\  \ \_\    \ \_\  \ \_____\  \ \_____\  \/\_____\ '
+msg '  \/_/  \/_/  \/_____/        \/____/   \/_____/     \/_/   \/_/     \/_/   \/_____/   \/_____/   \/_____/ '
+msg '                                                                                                            '
+
 
 # .gitconfig
 if [ -f ".gitconfig" ]; then
-	echo "==> Updating .gitconfig... OK"
+	msg_installing ".gitconfig"
 	cp .gitconfig ~/.gitconfig
 fi
 
 # .gitignore_global
 if [ -f ".gitignore_global" ]; then
-    echo "==> Updating .gitignore_global... OK"
+    msg_installing ".gitignore_global"
     cp .gitignore_global ~/.gitignore_global
     git config --global core.excludesfile ~/.gitignore_global
 fi
 
 # homebrew
 if which brew &> /dev/null; then
-	echo "==> Checking homebrew... OK"
+	msg_checking "homebrew"
 else
-	echo "==> Installing Homebrew (https://github.com/mxcl/homebrew/wiki/installation)..."
+	msg_install "Homebrew" "https://github.com/mxcl/homebrew/wiki/installation)"
 	/usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
-	echo "==> OK"
+	ok "OK"
 fi
 
 # nodejs
 if which node &> /dev/null; then
-	echo "==> Checking node... OK"
+	msg_checking "node"
 else
-	echo "==> Installing node (git clone git://github.com/ry/node.git)..."
+	msg_install "Installing node (git clone git://github.com/ry/node.git)"
 	brew install node
-	echo "==> OK"
+	echo "OK"
 fi
 
 # npm
 if which npm &> /dev/null; then
-	echo "==> Checking npm... OK"
+	msg_checking "npm"
 else
-	echo "==> Installing npm (curl http://npmjs.org/install.sh | sh)..."
+	msg_install "npm" "curl http://npmjs.org/install.sh | sh"
 	curl https://npmjs.org/install.sh -k | sh
-	echo "==> OK"
+	echo "OK"
 fi
 
 # docpad
 if which docpad &> /dev/null; then
-	echo "==> Checking docpad... OK"
+	msg_checking "docpad"
 else
-	echo "==> Installing docpad (sudo npm install -fg docpad@6.20 | sh)..."
+	msg_install "docpad" "sudo npm install -fg docpad@6.20 | sh"
 	sudo npm install -fg docpad@6.20
-	echo "==> OK"
+	echo "OK"
 fi
 
 # jshint
 if which jshint &> /dev/null; then
-	echo "==> Checking jshint... OK"
+	msg_checking "jshint"
 else
-	echo "==> Installing jshint (sudo npm install jshint -g)..."
+	msg_install "jshint" "sudo npm install jshint -g"
 	sudo npm install jshint -g
-	echo "==> OK"
+	echo "OK"
 fi
 
 # csslint
 if which csslint &> /dev/null; then
-	echo "==> Checking csslint... OK"
+	msg_checking "csslint"
 else
-	echo "==> Installing csslint (sudo npm install -g csslint)..."
+	msg_install "csslint" "sudo npm install -g csslint"
 	sudo npm install -g csslint
-	echo "==> OK"
+	msg_ok "OK"
 fi
 
 # update gems
-if which gem &> /dev/null; then
-	echo "==> Checking gem... OK"
-	sudo gem update --system
-	echo "==> Updating gem... OK"
-fi
+# if which gem &> /dev/null; then
+# 	msg_checking "gem"
+# 	sudo gem update --system
+# 	echo "gem"
+# fi
 
-# capistrano
+#capistrano
 if which cap &> /dev/null; then
-	echo "==> Checking capistrano... OK"
+	msg_checking "capistrano"
 else
-	echo "==> Installing capistrano (gem install capistrano)..."
+	msg_install "capistrano" "gem install capistrano"
 	sudo gem install capistrano
-	echo "==> OK"
+	msg_ok "capistrano"
 fi
 
 # mongo
 if which mongod &> /dev/null; then
-	echo "==> Checking mongodb... OK"
+	msg_checking "mongodb"
 else
-	echo "==> Installing mongodb (brew install mongodb)..."
+	msg_install "mongodb" "brew install mongodb)"
 	brew install mongodb
-	echo "==> OK"
+	msg_ok "OK"
 fi
 
 # .profile
 if [ -f ".profile" ]; then
-	echo "==> Updating .profile... OK"
+	msg_installing ".profile"
 	cp .profile ~/.profile
-	echo "==> Now type: source ~/.profile"
+	msg_alert "Now type: source ~/.profile"
 fi
