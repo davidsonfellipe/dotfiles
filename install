@@ -87,11 +87,11 @@ else
 fi
 
 # update gems
-# if which gem &> /dev/null; then
-# 	msg_checking "gem"
-# 	sudo gem update --system
-# 	echo "gem"
-# fi
+if which gem &> /dev/null; then
+	msg_checking "gem"
+	sudo gem update --system
+	echo "gem"
+fi
 
 #capistrano
 if which cap &> /dev/null; then
@@ -100,6 +100,15 @@ else
 	msg_install "capistrano" "gem install capistrano"
 	sudo gem install capistrano
 	msg_ok "capistrano"
+fi
+
+#compass
+if which compass &> /dev/null; then
+	msg_checking "compass"
+else
+	msg_install "compass" "gem install compass"
+	sudo gem install compass
+	msg_ok "compass"
 fi
 
 # mongo
