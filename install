@@ -1,4 +1,3 @@
-# Notice title
 # function print { echo  "\033[1;32m=> $1\033[0m"; }
 function msg_checking { echo  "\033[1;32m=> $1 ✔\033[0m"; }
 function msg_installing { echo  "\033[1;33m==> $1 [updating] ✔\033[0m"; }
@@ -22,13 +21,13 @@ msg '                                                                           
 # .gitconfig
 if [ -f ".gitconfig" ]; then
 	msg_installing ".gitconfig"
-	cp .gitconfig ~/.gitconfig
+	cp git/.gitconfig ~/.gitconfig
 fi
 
 # .gitignore_global
 if [ -f ".gitignore_global" ]; then
     msg_installing ".gitignore_global"
-    cp .gitignore_global ~/.gitignore_global
+    cp git/.gitignore_global ~/.gitignore_global
     git config --global core.excludesfile ~/.gitignore_global
 fi
 
