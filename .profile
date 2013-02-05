@@ -38,7 +38,7 @@ alias talks='cd /Users/davidson/Dropbox/talks'
 alias projetos='cd /Users/davidson/Projetos'
 
 # mongo
-alias mongoRun='mongod --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf'
+alias mongoRun='mongod --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf &'
 
 # thumbor
 alias thumborRun='thumbor -c conf/setting_thumbor_local.py -p 8887 &'
