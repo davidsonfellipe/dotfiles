@@ -26,6 +26,7 @@ alias compassw='compass watch'
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
 alias csslintUpdate='sudo npm install -g csslint'
 alias sublime='cd /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/; ./subl'
+alias rmpyc='find . -iname "*.pyc" -delete'
 
 # dropbox
 alias dotfiles='cd /Users/davidson/Dropbox/labs/dotfiles'
