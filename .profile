@@ -57,3 +57,5 @@ export PATH="/usr/local/share/npm/bin:${PATH}"
 # processes
 alias tm='top -o vsize' # memory
 alias tu='top -o cpu' # cpu
+
+export ESPORTES_PATH=/Users/davidson/Projetos/esportes
