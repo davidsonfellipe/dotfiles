@@ -1,15 +1,3 @@
-# rvm
-if [ -s "$HOME/.rvm/scripts/rvm" ]; then . "$HOME/.rvm/scripts/rvm"; fi
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-export PIP_VIRTUALENV_BASE=$WORKON_HOME 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-export LSCOLORS="DxGxcxdxCxegedabagacad"
-PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
-
 # general
 alias ls="ls -G"   
 alias la='ls -la'
@@ -22,6 +10,7 @@ alias up='cd ..'
 alias celar='clear'
 alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 alias compassw='compass watch'
+
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
 alias csslintUpdate='sudo npm install -g csslint'
@@ -51,11 +40,24 @@ alias specjs='rake spec:javascript'
 alias site-packages-2.6='cd /opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages'  
 alias pyclean='find . -name "*.pyc" -exec rm {} \;'
 
-#npm
-export PATH="/usr/local/share/npm/bin:${PATH}"
-
 # processes
 alias tm='top -o vsize' # memory
 alias tu='top -o cpu' # cpu
 
-export ESPORTES_PATH=/Users/davidson/Projetos/esportes
+# paths > general
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:${PATH}"
+export ESPORTES_PATH="/Users/davidson/Projetos/esportes"
+
+# paths > rvm
+if [ -s "$HOME/.rvm/scripts/rvm" ]; then . "$HOME/.rvm/scripts/rvm"; fi
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# paths > virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+export PIP_VIRTUALENV_BASE=$WORKON_HOME 
+
+# colors
+export LSCOLORS="DxGxcxdxCxegedabagacad"
+PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
