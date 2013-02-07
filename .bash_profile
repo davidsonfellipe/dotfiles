@@ -2,6 +2,8 @@
 alias ls="ls -G"   
 alias la='ls -la'
 alias ll='ls -l'
+alias lw='ls -l'
+alias lqq='ls -l'
 alias cl='clear'
 alias home='cd ~'
 alias rt='reset'
@@ -10,6 +12,7 @@ alias up='cd ..'
 alias celar='clear'
 alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 alias compassw='compass watch'
+# alias profile-reload='source ~/.profile'
 
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'

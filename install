@@ -134,8 +134,9 @@ else
 fi
 
 # .profile
-if [ -f ".profile" ]; then
-	msg_installing ".profile"
-	cp .profile ~/.profile
-	msg_alert "Now type: source ~/.profile"
+if [ -f ".bash_profile" ]; then
+	msg_installing ".bash_profile"
+	cp .bash_profile ~/.bash_profile
+	source ~/.bash_profile
+	msg_alert "For use on this session, type: source ~/.bash_profile"
 fi
