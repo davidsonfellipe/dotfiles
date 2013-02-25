@@ -12,6 +12,7 @@ alias up='cd ..'
 alias celar='clear'
 alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 alias compassw='compass watch'
+alias pydev='python setup.py develop --no-deps'
 # alias profile-reload='source ~/.profile'
 
 # sofwares
