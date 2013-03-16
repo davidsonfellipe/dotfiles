@@ -99,6 +99,15 @@ else
 	msg_ok "OK"
 fi
 
+# phantomjs
+if which phantomjs &> /dev/null; then
+        msg_checking "phantomjs"
+else
+        msg_install "phantomjs" "brew install phantomjs"
+        brew install phantomjs
+        msg_ok "OK"
+fi
+
 # update gems
 if which gem &> /dev/null; then
 	msg_checking "gem"
