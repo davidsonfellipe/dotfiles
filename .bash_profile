@@ -1,5 +1,5 @@
 # general
-alias ls="ls -G"   
+alias ls='ls -G'
 alias la='ls -la'
 alias ll='ls -l'
 alias lw='ls -l'
@@ -16,7 +16,6 @@ alias compassw='compass watch'
 
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
-alias csslintUpdate='sudo npm install -g csslint'
 alias sublime='cd /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/; ./subl'
 alias rmpyc='find . -iname "*.pyc" -delete'
 
