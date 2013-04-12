@@ -12,7 +12,6 @@ alias up='cd ..'
 alias celar='clear'
 alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 alias compassw='compass watch'
-# alias profile-reload='source ~/.profile'
 
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
