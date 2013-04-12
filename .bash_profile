@@ -12,7 +12,6 @@ alias up='cd ..'
 alias celar='clear'
 alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 alias compassw='compass watch'
-alias pydev='python setup.py develop --no-deps'
 # alias profile-reload='source ~/.profile'
 
 # sofwares
@@ -41,8 +40,10 @@ alias thumborRun='thumbor -c conf/setting_thumbor_local.py -p 8887 &'
 alias specjs='rake spec:javascript'
 
 # python
-alias site-packages-2.6='cd /opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages'  
+alias site-packages-2.6='cd /opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages'
 alias pyclean='find . -name "*.pyc" -exec rm {} \;'
+alias pydist='python setup.py sdist upload -r ipypi'
+alias pydev='python setup.py develop --no-deps'
 
 # processes
 alias tm='top -o vsize' # memory
