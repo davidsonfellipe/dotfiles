@@ -11,7 +11,6 @@ alias trash='rm -fr ~/.Trash'
 alias up='cd ..'
 alias celar='clear'
 alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
-alias compassw='compass watch'
 
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
@@ -42,6 +41,9 @@ alias pyclean='find . -name "*.pyc" -exec rm {} \;'
 alias pydist='python setup.py sdist upload -r ipypi'
 alias pydev='python setup.py develop --no-deps'
 
+# compass
+alias compassw='compass watch'
+
 # processes
 alias tm='top -o vsize' # memory
 alias tu='top -o cpu' # cpu
@@ -58,7 +60,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # paths > virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-export PIP_VIRTUALENV_BASE=$WORKON_HOME 
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 # colors
 export LSCOLORS="DxGxcxdxCxegedabagacad"
