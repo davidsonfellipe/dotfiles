@@ -114,7 +114,7 @@ if which gem &> /dev/null; then
     echo "gem"
 fi
 
-#capistrano
+# capistrano
 if which cap &> /dev/null; then
     msg_checking "capistrano"
 else
@@ -123,13 +123,22 @@ else
     msg_ok "capistrano"
 fi
 
-#compass
+# compass
 if which compass &> /dev/null; then
     msg_checking "compass"
 else
     msg_install "compass" "gem install compass"
     sudo gem install compass
     msg_ok "compass"
+fi
+
+# jekyll
+if which jekyll &> /dev/null; then
+    msg_checking "jekyll"
+else
+    msg_install "jekyll" "gem install jekyll"
+    sudo gem install jekyll
+    msg_ok "jekyll"
 fi
 
 # mongo
