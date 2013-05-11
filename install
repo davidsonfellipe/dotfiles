@@ -23,7 +23,6 @@ function msg_alert { echo "\033[1;31m✖ $1 ✖\033[0m"; }
 # Error title
 # function error { echo "\033[1;31m=> Error: $1 ✖\033[0m"; }
 
-
 msg ' __    __    __  __        _____     ______     ______   ______   __     __         ______     ______    '
 msg '/\ "-./  \  /\ \_\ \      /\  __-.  /\  __ \   /\__  _\ /\  ___\ /\ \   /\ \       /\  ___\   /\  ___\   '
 msg '\ \ \-./\ \ \ \____ \     \ \ \/\ \ \ \ \/\ \  \/_/\ \/ \ \  __\ \ \ \  \ \ \____  \ \  __\   \ \___  \  '
@@ -34,8 +33,8 @@ msg '                                                                           
 
 # .gitconfig
 if [ -f ".gitconfig" ]; then
-	msg_installing ".gitconfig"
-	cp git/.gitconfig ~/.gitconfig
+    msg_installing ".gitconfig"
+    cp git/.gitconfig ~/.gitconfig
 fi
 
 # .gitignore_global
@@ -47,105 +46,105 @@ fi
 
 # homebrew
 if which brew &> /dev/null; then
-	msg_checking "homebrew"
+    msg_checking "homebrew"
 else
-	msg_install "Homebrew" "https://github.com/mxcl/homebrew/wiki/installation"
-	/usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
-	ok "OK"
+    msg_install "Homebrew" "https://github.com/mxcl/homebrew/wiki/installation"
+    /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+    ok "OK"
 fi
 
 # nodejs
 if which node &> /dev/null; then
-	msg_checking "node"
+    msg_checking "node"
 else
-	msg_install "node" "git clone git://github.com/ry/node.git"
-	brew install node
-	echo "OK"
+    msg_install "node" "git clone git://github.com/ry/node.git"
+    brew install node
+    echo "OK"
 fi
 
 # npm
 if which npm &> /dev/null; then
-	msg_checking "npm"
+    msg_checking "npm"
 else
-	msg_install "npm" "curl http://npmjs.org/install.sh | sh"
-	curl https://npmjs.org/install.sh -k | sh
-	echo "OK"
+    msg_install "npm" "curl http://npmjs.org/install.sh | sh"
+    curl https://npmjs.org/install.sh -k | sh
+    echo "OK"
 fi
 
 # docpad
 if which docpad &> /dev/null; then
-	msg_checking "docpad"
+    msg_checking "docpad"
 else
-	msg_install "docpad" "sudo npm install -fg docpad@6.20 | sh"
-	sudo npm install -fg docpad@6.20
-	echo "OK"
+    msg_install "docpad" "sudo npm install -fg docpad@6.20 | sh"
+    sudo npm install -fg docpad@6.20
+    echo "OK"
 fi
 
 # jshint
 if which jshint &> /dev/null; then
-	msg_checking "jshint"
+    msg_checking "jshint"
 else
-	msg_install "jshint" "sudo npm install jshint -g"
-	sudo npm install jshint -g
-	echo "OK"
+    msg_install "jshint" "sudo npm install jshint -g"
+    sudo npm install jshint -g
+    echo "OK"
 fi
 
 # csslint
 if which csslint &> /dev/null; then
-	msg_checking "csslint"
+    msg_checking "csslint"
 else
-	msg_install "csslint" "sudo npm install -g csslint"
-	sudo npm install -g csslint
-	msg_ok "OK"
+    msg_install "csslint" "sudo npm install -g csslint"
+    sudo npm install -g csslint
+    msg_ok "OK"
 fi
 
 # phantomjs
 if which phantomjs &> /dev/null; then
-        msg_checking "phantomjs"
+    msg_checking "phantomjs"
 else
-        msg_install "phantomjs" "brew install phantomjs"
-        brew install phantomjs
-        msg_ok "OK"
+    msg_install "phantomjs" "brew install phantomjs"
+    brew install phantomjs
+    msg_ok "OK"
 fi
 
 # update gems
 if which gem &> /dev/null; then
-	msg_checking "gem"
-	sudo gem update --system
-	echo "gem"
+    msg_checking "gem"
+    sudo gem update --system
+    echo "gem"
 fi
 
 #capistrano
 if which cap &> /dev/null; then
-	msg_checking "capistrano"
+    msg_checking "capistrano"
 else
-	msg_install "capistrano" "gem install capistrano"
-	sudo gem install capistrano
-	msg_ok "capistrano"
+    msg_install "capistrano" "gem install capistrano"
+    sudo gem install capistrano
+    msg_ok "capistrano"
 fi
 
 #compass
 if which compass &> /dev/null; then
-	msg_checking "compass"
+    msg_checking "compass"
 else
-	msg_install "compass" "gem install compass"
-	sudo gem install compass
-	msg_ok "compass"
+    msg_install "compass" "gem install compass"
+    sudo gem install compass
+    msg_ok "compass"
 fi
 
 # mongo
 if which mongod &> /dev/null; then
-	msg_checking "mongodb"
+    msg_checking "mongodb"
 else
-	msg_install "mongodb" "brew install mongodb"
-	brew install mongodb
-	msg_ok "OK"
+    msg_install "mongodb" "brew install mongodb"
+    brew install mongodb
+    msg_ok "OK"
 fi
 
 # .profile
 if [ -f ".bash_profile" ]; then
-	msg_installing ".bash_profile"
-	cp .bash_profile ~/.bash_profile
-	source ~/.bash_profile
-	msg_alert "For use on this session, type: source ~/.bash_profile"
+    msg_installing ".bash_profile"
+    cp .bash_profile ~/.bash_profile
+    source ~/.bash_profile
+    msg_alert "For use on this session, type: source ~/.bash_profile"
 fi
