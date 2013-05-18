@@ -27,15 +27,14 @@ msg ' \ \_\ \ \_\ \/\_____\     \ \____-  \ \_____\    \ \_\  \ \_\    \ \_\  \ 
 msg '  \/_/  \/_/  \/_____/      \/____/   \/_____/     \/_/   \/_/     \/_/   \/_____/   \/_____/   \/_____/ '
 msg '                                                                                                         '
 
-
 # .gitconfig
-if [ -f ".gitconfig" ]; then
+if [ -f "git/.gitconfig" ]; then
     msg_installing ".gitconfig"
     cp git/.gitconfig ~/.gitconfig
 fi
 
 # .gitignore_global
-if [ -f ".gitignore_global" ]; then
+if [ -f "git/.gitignore_global" ]; then
     msg_installing ".gitignore_global"
     cp git/.gitignore_global ~/.gitignore_global
     git config --global core.excludesfile ~/.gitignore_global
