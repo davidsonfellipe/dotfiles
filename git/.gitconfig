@@ -1,39 +1,40 @@
 [user]
-	name = Davidson Fellipe
-	email = email@fellipe.com
+    name = Davidson Fellipe
+    email = email@fellipe.com
 [color]
-	diff = auto
-	grep = auto
-	interactive = auto
-	status = auto
-	branch = auto
-	status = auto
+    diff = auto
+    grep = auto
+    interactive = auto
+    status = auto
+    branch = auto
+    status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 [alias]
-	st = status -sb
-	ci = commit -m
-	br = branch
-	df = diff
-	lg = log -pgit ps
-	co = checkout
-	tree = log --graph --pretty=oneline --decorate
-	pom = push origin master
-	ps = push
-	pl = pull
-	pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
-	amend = commit --amend -C HEAD
-	ll   = log --pretty=oneline --decorate --abbrev-commit --max-count=15
-	rn = log -M
-	short = shortlog -s -n
+    st = status -sb
+    ci = commit -m
+    br = branch
+    df = diff
+    lg = log -pgit ps
+    co = checkout
+    tree = log --graph --pretty=oneline --decorate
+    pom = push origin master
+    ps = push
+    pl = pull
+    pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
+    amend = commit --amend -C HEAD
+    ll   = log --pretty=oneline --decorate --abbrev-commit --max-count=15
+    lll  = git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    rn = log -M
+    short = shortlog -s -n
