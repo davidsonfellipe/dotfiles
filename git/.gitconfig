@@ -22,7 +22,7 @@
 	changed = green
 	untracked = cyan
 [alias]
-	st = status
+	st = status -sb
 	ci = commit -m
 	br = branch
 	df = diff
