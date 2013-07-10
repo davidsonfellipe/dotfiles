@@ -11,6 +11,7 @@ alias trash='rm -fr ~/.Trash'
 alias up='cd ..'
 alias celar='clear'
 alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
+alias rmds='rm -f .DS_Store .localized;ls -laG'
 
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
