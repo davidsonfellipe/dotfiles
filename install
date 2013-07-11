@@ -27,9 +27,16 @@ msg ' \ \_\ \ \_\ \/\_____\     \ \____-  \ \_____\    \ \_\  \ \_\    \ \_\  \ 
 msg '  \/_/  \/_/  \/_____/      \/____/   \/_____/     \/_/   \/_/     \/_/   \/_____/   \/_____/   \/_____/ '
 msg '                                                                                                         '
 
+if [[ -d "$HOME/Dropbox/labs/dotfiles" ]]; then
+    msg_checking "Checking dotfiles directory"
+else
+    msg_install "Cloning" "https://github.com/davidsonfellipe/dotfiles.git"
+    git clone https://github.com/davidsonfellipe/dotfiles.git $HOME/dotfiles
+    ok "OK"
+fi
+
 # .gitconfig
 if [ -f "git/.gitconfig" ]; then
-    msg_installing ".gitconfig"
     cp git/.gitconfig ~/.gitconfig
 fi
 
