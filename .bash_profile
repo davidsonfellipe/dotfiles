@@ -23,6 +23,7 @@ alias dotfiles='cd /Users/davidson/Dropbox/labs/dotfiles'
 alias dropbox='cd /Users/davidson/Dropbox'
 alias mestrado='cd /Users/davidson/Dropbox/study/mestrado'
 alias labs='cd /Users/davidson/Dropbox/labs'
+alias jobs='cd /Users/davidson/Dropbox/jobs'
 alias talks='cd /Users/davidson/Dropbox/talks'
 
 # others dirs
