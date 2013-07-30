@@ -153,6 +153,15 @@ else
     msg_ok "OK"
 fi
 
+# go
+if which go &> /dev/null; then
+    msg_checking "go"
+else
+    msg_install "go" "brew install go"
+    brew install go
+    msg_ok "OK"
+fi
+
 # .profile
 if [ -f ".bash_profile" ]; then
     msg_installing ".bash_profile"
