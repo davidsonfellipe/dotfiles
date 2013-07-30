@@ -63,6 +63,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
+# path > go
+export GOPATH=/home/davidson/Dropbox/labs/learning-go
+
 # colors
 export LSCOLORS="DxGxcxdxCxegedabagacad"
 
