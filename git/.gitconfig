@@ -29,7 +29,7 @@
     lg = log -pgit ps
     co = checkout
     tree = log --graph --pretty=oneline --decorate
-    pom = push origin master
+    pom = pull origin master
     ps = push
     pl = pull
     pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
