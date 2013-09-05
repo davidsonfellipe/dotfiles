@@ -15,7 +15,7 @@ alias rmds='rm -f .DS_Store .localized;ls -laG'
 
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
-alias sublime='cd /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/; ./subl'
+#alias sublime='cd /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/; ./subl'
 alias rmpyc='find . -iname "*.pyc" -delete'
 
 # dropbox
@@ -48,6 +48,10 @@ alias compassw='compass watch'
 # processes
 alias tm='top -o vsize' # memory
 alias tu='top -o cpu' # cpu
+
+# sublime editor
+#export EDITOR='subl -w'
+export EDITOR=/usr/local/bin/subl
 
 # paths > general
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
