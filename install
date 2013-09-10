@@ -34,8 +34,15 @@ else
     ok "OK"
 fi
 
+# .ssh/config
+if [ -f "ssh/config" ]; then
+    msg_installing "~/.ssh/config"
+    cp ssh/config ~/.ssh/config
+fi
+
 # .gitconfig
 if [ -f "git/.gitconfig" ]; then
+    msg_installing "~/.gitconfig"
     cp git/.gitconfig ~/.gitconfig
 fi
 
