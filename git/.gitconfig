@@ -28,6 +28,7 @@
     df = diff
     lg = log -pgit ps
     co = checkout
+    fu = fetch upstream
     tree = log --graph --pretty=oneline --decorate
     pom = pull origin master
     ps = push
