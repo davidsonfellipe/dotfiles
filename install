@@ -48,7 +48,7 @@ fi
 
 # .gitignore_global
 if [ -f "git/.gitignore_global" ]; then
-    msg_installing ".gitignore_global"
+    msg_installing "~/.gitignore_global"
     cp git/.gitignore_global ~/.gitignore_global
     git config --global core.excludesfile ~/.gitignore_global
 fi
