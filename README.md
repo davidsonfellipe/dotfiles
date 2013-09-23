@@ -29,8 +29,8 @@ git ps ~ git push
 git pl ~ git pull
 git pp ~ git !"echo 'Pull'; git pull; echo 'Push'; git push"
 git amend ~ git commit --amend -C HEAD
-git ll   ~ git log --pretty=oneline --decorate --abbrev-commit --max-count=15
-git lll  ~ git git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+git ll ~ git log --pretty=oneline --decorate --abbrev-commit --max-count=15
+git lll ~ git git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 git rn ~ git log -M
 git short ~ git shortlog -s -n
 ```
