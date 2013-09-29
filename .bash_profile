@@ -14,13 +14,13 @@ alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^
 alias rmds='rm -f .DS_Store .localized;ls -laG'
 
 # finder
-alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 
 # net
-alias whois="whois -h whois-servers.net"
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias iplocal="ipconfig getifaddr en1"
+alias whois='whois -h whois-servers.net'
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias iplocal='ipconfig getifaddr en1'
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
 # sofwares

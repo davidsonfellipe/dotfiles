@@ -212,6 +212,5 @@ if [[ $OSX && `which vim 2> /dev/null` ]]; then
         msg_ok "vim's plugins updated successfuly.";
     else
         msg_alert "We had a problem while updating vim's plugins.";
-        exit 1
     fi
 fi
