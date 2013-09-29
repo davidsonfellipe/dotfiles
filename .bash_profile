@@ -59,7 +59,7 @@ alias tm='top -o vsize' # memory
 alias tu='top -o cpu' # cpu
 
 # sublime editor
-export EDITOR=/usr/local/bin/subl
+export EDITOR="/usr/local/bin/subl"
 
 # paths > general
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
@@ -71,12 +71,12 @@ if [ -s "$HOME/.rvm/scripts/rvm" ]; then . "$HOME/.rvm/scripts/rvm"; fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # paths > virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME="$HOME/.virtualenvs"
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 # path > go
-export GOPATH=/home/davidson/Dropbox/labs/learning-go
+export GOPATH="/home/davidson/Dropbox/labs/learning-go"
 
 # colors
 export LSCOLORS="DxGxcxdxCxegedabagacad"
