@@ -28,6 +28,8 @@ msg ' \ \_\ \ \_\ \/\_____\     \ \____-  \ \_____\   \ \_\  \ \_\    \ \_\  \ \
 msg '  \/_/  \/_/  \/_____/      \/____/   \/_____/    \/_/   \/_/     \/_/   \/_____/   \/_____/   \/_____/ '
 msg '                                                                                                        '
 
+OSX=$(test "`uname`" == "Darwin" && echo "x")
+
 if [[ -d "$HOME/Dropbox/labs/dotfiles" ]]; then
     msg_checking "Checking dotfiles directory"
 else
@@ -190,4 +192,26 @@ if [ -f ".bash_profile" ]; then
     cp .bash_profile ~/.bash_profile
     source ~/.bash_profile
     msg_alert "For use on this session, type: source ~/.bash_profile"
+fi
+
+# clone the neobundle plugin, to manage vim plugins
+if [ ! -d "$HOME/.vim/bundle/neobundle.vim/.git" ]; then
+    msg_installing "Installing neobundle..."
+    git clone https://github.com/Shougo/neobundle.vim.git $HOME/.vim/bundle/neobundle.vim
+else
+    msg_ok "neobundle is already installed."
+fi
+
+# vim's plugins
+if [[ $OSX && `which vim 2> /dev/null` ]]; then
+
+    msg_installing "Installing/Updating vim's plugins..."
+    vim -f +NeoBundleInstall +qall
+
+    if [ $? -eq 0 ]; then
+        msg_ok "vim's plugins updated successfuly.";
+    else
+        msg_alert "We had a problem while updating vim's plugins.";
+        exit 1
+    fi
 fi
