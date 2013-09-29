@@ -1,6 +1,6 @@
 # My dotfiles
 
-![Screen](http://f.cl.ly/items/2k391Z311j202h0H3f2u/Screen%20Shot%202013-05-18%20at%203.57.39%20AM.png)
+![Screen](http://f.cl.ly/items/000J430f3y1M1O2g3L2D/Screen%20Shot%202013-09-28%20at%2011.06.01%20PM.png)
 
 ## How to run
 
