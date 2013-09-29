@@ -62,6 +62,13 @@ if [ -f "git/.gitignore_global" ]; then
     git config --global core.excludesfile ~/.gitignore_global
 fi
 
+# ln for Sublime
+if [ -f "/usr/local/bin/subl" ]; then
+    msg_checking "ln for Sublime"
+else
+    ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+fi
+
 # homebrew
 if which brew &> /dev/null; then
     msg_checking "homebrew"
@@ -175,11 +182,6 @@ else
     msg_install "go" "brew install go"
     brew install go
     msg_ok "OK"
-fi
-
-# ln for Sublime
-if [ ! -d "/usr/local/bin/subl" ]; then
-    ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 fi
 
 # .profile
