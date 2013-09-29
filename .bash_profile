@@ -13,6 +13,9 @@ alias celar='clear'
 alias tree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 alias rmds='rm -f .DS_Store .localized;ls -laG'
 
+# net
+alias whois="whois -h whois-servers.net"
+
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
 alias rmpyc='find . -iname "*.pyc" -delete'
