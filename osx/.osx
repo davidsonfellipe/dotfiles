@@ -1,0 +1,25 @@
+# OSX configs
+
+# Trackpad / bottom right corner with right-click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+
+# Set the timezone / see all $ systemsetup -listtimezones
+systemsetup -settimezone "America/Sao_Paulo" > /dev/null
+
+# Save screenshots in PNG
+defaults write com.apple.screencapture type -string "png"
+
+# Finder / show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder / show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder / show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show ~/Library
+chflags nohidden ~/Library
