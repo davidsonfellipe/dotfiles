@@ -48,6 +48,13 @@ if [ -f "git/.gitconfig" ]; then
     cp git/.gitconfig ~/.gitconfig
 fi
 
+# .osx
+if [ -f "osx/.osx" ]; then
+    msg_installing "~/.osx"
+    cp osx/.osx ~/.osx
+    killall Finder
+fi
+
 # .gitignore_global
 if [ -f "git/.gitignore_global" ]; then
     msg_installing "~/.gitignore_global"
