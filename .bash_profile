@@ -15,6 +15,9 @@ alias rmds='rm -f .DS_Store .localized;ls -laG'
 
 # net
 alias whois="whois -h whois-servers.net"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias iplocal="ipconfig getifaddr en1"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
