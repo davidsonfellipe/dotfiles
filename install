@@ -98,15 +98,6 @@ else
     echo "OK"
 fi
 
-# docpad
-if which docpad &> /dev/null; then
-    msg_checking "docpad"
-else
-    msg_install "docpad" "sudo npm install -fg docpad@6.20 | sh"
-    sudo npm install -fg docpad@6.20
-    echo "OK"
-fi
-
 # jshint
 if which jshint &> /dev/null; then
     msg_checking "jshint"
