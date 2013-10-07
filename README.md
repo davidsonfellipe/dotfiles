@@ -49,7 +49,6 @@ git short ~ git shortlog -s -n
 => homebrew ✔
 => node ✔
 => npm ✔
-=> docpad ✔
 => jshint ✔
 => csslint ✔
 => phantomjs ✔
