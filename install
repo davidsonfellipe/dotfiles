@@ -134,6 +134,15 @@ else
     msg_ok "OK"
 fi
 
+# tree
+if which tree &> /dev/null; then
+    msg_checking "tree"
+else
+    msg_install "tree" "brew install tree"
+    brew install tree
+    msg_ok "OK"
+fi
+
 # update gems
 if which gem &> /dev/null; then
     msg_checking "gem"
