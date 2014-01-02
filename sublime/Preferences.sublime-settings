@@ -1,0 +1,102 @@
+{
+    "auto_complete": true,
+    "auto_complete_commit_on_tab": false,
+    "auto_complete_delay": 50,
+    "auto_complete_size_limit": 4194304,
+    "auto_indent": true,
+    "auto_match_enabled": true,
+    "binary_file_patterns": [
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.gif",
+        "*.ttf",
+        "*.tga",
+        "*.dds",
+        "*.ico",
+        "*.eot",
+        "*.pdf",
+        "*.swf",
+        "*.jar",
+        "*.zip"
+    ],
+    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+    "draw_white_space": "all",
+    "enable_telemetry": false,
+    "ensure_newline_at_eof_on_save": true,
+    "file_exclude_patterns":
+    [
+        "*.a",
+        "*.class",
+        "*.db",
+        "*.dll",
+        ".DS_Store",
+        "*.dylib",
+        "*.exe",
+        "*.idb",
+        "*.lib",
+        "*.log",
+        "*.ncb",
+        "*.o",
+        "*.obj",
+        "*.pdb",
+        "*.po",
+        "*.psd",
+        "*.pyc",
+        "*.pyo",
+        "*.scssc",
+        "*.sdf",
+        "*.so",
+        "*.suo"
+    ],
+    "fold_buttons": false,
+    "folder_exclude_patterns":
+    [
+        "cache",
+        ".svn",
+        ".git",
+        ".hg",
+        "CVS",
+        "__pycache__"
+    ],
+    "font_face": "Source Code Pro",
+    "font_options":
+    [
+        "subpixel_antialias"
+    ],
+    "font_size": 13.0,
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "ignored_packages":
+    [
+        "Vintage",
+        "GitGutter"
+    ],
+    "indent_guide_options":
+    [
+        "draw_active",
+        "draw_normal"
+    ],
+    "indent_to_bracket": true,
+    "line_padding_top": 1,
+    "margin": 10,
+    "preview_on_click": false,
+    "rulers":
+    [
+        79
+    ],
+    "shift_tab_unindent": true,
+    "show_panel_on_build": false,
+    "show_tab_close_buttons": false,
+    "soda_classic_tabs": true,
+    "soda_folder_icons": true,
+    "tab_size": 4,
+    "theme": "Soda Dark.sublime-theme",
+    "tree_animation_enabled": true,
+    "trim_automatic_white_space": true,
+    "translate_tabs_to_spaces": false,
+    "trim_trailing_white_space_on_save": false,
+    "use_simple_full_screen": true,
+    "word_wrap": false,
+    "wrap_width": 80
+}
