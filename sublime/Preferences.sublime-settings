@@ -57,6 +57,7 @@
         ".git",
         ".hg",
         "CVS",
+        "node_modules",
         "__pycache__"
     ],
     "font_face": "Source Code Pro",
