@@ -93,8 +93,8 @@ fi
 if which npm &> /dev/null; then
     msg_checking "npm"
 else
-    msg_install "npm" "curl http://npmjs.org/install.sh | sh"
-    curl https://npmjs.org/install.sh -k | sh
+    msg_install "npm" "curl https://npmjs.org/install.sh | sh"
+    curl -L https://npmjs.org/install.sh | sh
     echo "OK"
 fi
 
@@ -182,7 +182,7 @@ if which mongod &> /dev/null; then
     msg_checking "mongodb"
 else
     msg_install "mongodb" "brew install mongodb"
-    brew install mongodb
+    brew install mongodb --with-openssl
     msg_ok "OK"
 fi
 
@@ -223,3 +223,6 @@ if [[ $OSX && `which vim 2> /dev/null` ]]; then
         msg_alert "We had a problem while updating vim's plugins.";
     fi
 fi
+
+# mysql
+sudo ln -s /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/lib/libmysqlclient.18.dylib
