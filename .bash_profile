@@ -85,7 +85,26 @@ export LSCOLORS="DxGxcxdxCxegedabagacad"
 # prompt
 export PS1='\[\033[01;32m\]\u ➜  \[\033[01;31m\]\w\[\033[00m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo "\[\033[01;33m\] ($(git branch | grep ^*|sed s/\*\ //))\[\033[00m\]"; fi) $ '
 
+# mysql
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export CFLAGS=-Qunused-arguments
+export CPPFLAGS=-Qunused-arguments
+
+ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
+
+PATH="/usr/local/mysql/bin:${PATH}"
+export PATH
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib/"
+export VERSIONER_PYTHON_PREFER_64_BIT=no
+export VERSIONER_PYTHON_PREFER_32_BIT=yes
+export ARCHFLAGS="-arch x86_64"
+
 # counter-line-code
 alias linecode-js='find . -name *.js | xargs wc -l'
 alias linecode-css='find . -name *.css | xargs wc -l'
 alias linecode-py='find . -name *.py | xargs wc -l'
+
+# Setting PATH for Python 2.7
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
