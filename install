@@ -107,6 +107,15 @@ else
     echo "OK"
 fi
 
+# vtop
+if which vtop &> /dev/null; then
+    msg_checking "vtop"
+else
+    msg_install "vtop" "sudo npm install vtop -g"
+    sudo npm install vtop -g
+    echo "OK"
+fi
+
 # jshint
 if which jshint &> /dev/null; then
     msg_checking "jshint"
