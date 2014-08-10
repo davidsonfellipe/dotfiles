@@ -15,8 +15,8 @@ OSX=$(test "`uname`" == "Darwin" && echo "x")
 if [[ -d "$HOME/Dropbox/labs/dotfiles" ]]; then
     msg_checking "Checking dotfiles directory"
 else
-    msg_install "Cloning" "https://github.com/davidsonfellipe/dotfiles.git"
-    git clone https://github.com/davidsonfellipe/dotfiles.git $HOME/dotfiles
+    msg_install "Cloning" "git@github.com:davidsonfellipe/dotfiles.git"
+    git clone git@github.com:davidsonfellipe/dotfiles.git $HOME/dotfiles
     ok "OK"
 fi
 
@@ -57,8 +57,8 @@ fi
 if which brew &> /dev/null; then
     msg_checking "homebrew"
 else
-    msg_install "Homebrew" "https://github.com/mxcl/homebrew/wiki/installation"
-    /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+    msg_install "Homebrew" "git@github.com:mxcl/homebrew/wiki/installation"
+    /usr/bin/ruby -e "$(/usr/bin/curl -fsSL git@raw.github.com:mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
     ok "OK"
 fi
 
@@ -145,7 +145,7 @@ fi
 # clone the neobundle plugin, to manage vim plugins
 if [ ! -d "$HOME/.vim/bundle/neobundle.vim/.git" ]; then
     msg_installing "Installing neobundle..."
-    git clone https://github.com/Shougo/neobundle.vim.git $HOME/.vim/bundle/neobundle.vim
+    git clone git@github.com:Shougo/neobundle.vim.git $HOME/.vim/bundle/neobundle.vim
 else
     msg_ok "neobundle is already installed."
 fi

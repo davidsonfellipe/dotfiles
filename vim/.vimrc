@@ -7,7 +7,7 @@ let mapleader=","
 "fonts and other gui stuff
 "make sure to install the powerline patched font
 "version of the font you like
-"https://github.com/Lokaltog/powerline-fonts
+"git@github.com:Lokaltog/powerline-fonts
 if has("gui_running")
   set guioptions-=T   "remove toolbar
   set guioptions-=r   "remove right-hand scroll bar
