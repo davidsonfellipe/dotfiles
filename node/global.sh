@@ -18,6 +18,15 @@ else
     echo "OK"
 fi
 
+# yeoman
+if which yo &> /dev/null; then
+    msg_checking "yo"
+else
+    msg_install "yo" "npm install -g yo"
+    npm install -g yo
+    echo "OK"
+fi
+
 # grunt-cli
 if which grunt &> /dev/null; then
     msg_checking "grunt"
