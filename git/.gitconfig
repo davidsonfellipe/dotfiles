@@ -33,6 +33,7 @@
     tree = log --graph --pretty=oneline --decorate
     pom = pull origin master
     ps = push
+    pst = push --tags
     pl = pull
     pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
     amend = commit --amend -C HEAD
