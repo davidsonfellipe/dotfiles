@@ -31,6 +31,7 @@ alias rmpyc='find . -iname "*.pyc" -delete'
 # dropbox
 alias dotfiles='cd /Users/davidson/Dropbox/labs/dotfiles'
 alias dropbox='cd /Users/davidson/Dropbox'
+alias drive='cd /Users/davidson/Google Drive'
 alias jobs='cd /Users/davidson/Dropbox/jobs'
 alias labs='cd /Users/davidson/Dropbox/labs'
 alias talks='cd /Users/davidson/Dropbox/talks'
