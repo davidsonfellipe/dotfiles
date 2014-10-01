@@ -52,14 +52,11 @@ alias pyclean='find . -name "*.pyc" -exec rm {} \;'
 alias pydist='python setup.py sdist upload -r ipypi'
 alias pydev='python setup.py develop --no-deps'
 
-# compass
-alias compassw='compass watch'
-
 # processes
 alias tm='top -o vsize' # memory
 alias tu='top -o cpu' # cpu
 
-# processes
+# mysql
 alias mysqlstart='/usr/local/mysql/support-files/mysql.server start'
 alias mysqlstop='/usr/local/mysql/support-files/mysql.server stop'
 alias mysqlreload='mysqlstart && mysqlstop;'
