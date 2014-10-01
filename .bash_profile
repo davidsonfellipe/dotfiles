@@ -59,6 +59,11 @@ alias compassw='compass watch'
 alias tm='top -o vsize' # memory
 alias tu='top -o cpu' # cpu
 
+# processes
+alias mysqlstart='/usr/local/mysql/support-files/mysql.server start'
+alias mysqlstop='/usr/local/mysql/support-files/mysql.server stop'
+alias mysqlreload='mysqlstart && mysqlstop;'
+
 # sublime editor
 export EDITOR="/usr/local/bin/subl"
 
