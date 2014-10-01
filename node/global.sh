@@ -9,15 +9,6 @@ else
     echo "OK"
 fi
 
-# npm
-if which npm &> /dev/null; then
-    msg_checking "npm"
-else
-    msg_install "npm" "curl https://npmjs.org/install.sh | sh"
-    curl -L https://npmjs.org/install.sh | sh
-    echo "OK"
-fi
-
 # yeoman
 if which yo &> /dev/null; then
     msg_checking "yo"
