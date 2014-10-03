@@ -16,6 +16,7 @@ alias rmds='rm -f .DS_Store .localized;ls -laG'
 # finder
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # net
 alias whois='whois -h whois-servers.net'
