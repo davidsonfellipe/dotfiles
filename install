@@ -32,6 +32,12 @@ if [ -f "git/.gitconfig" ]; then
     cp git/.gitconfig ~/.gitconfig
 fi
 
+# .editorconfig
+if [ -f ".editorconfig" ]; then
+    msg_installing "~/.editorconfig"
+    cp .editorconfig ~/.editorconfig
+fi
+
 # .osx
 if [ -f "osx/.osx" ]; then
     msg_installing "~/.osx"
