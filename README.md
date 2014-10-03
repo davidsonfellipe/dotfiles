@@ -8,10 +8,12 @@
 $ sh install
 ```
 
-## Install via curl
+## Instalation
 
-```
+```bash
 $ curl -L https://raw.github.com/davidsonfellipe/dotfiles/master/install | sh
+# or
+$git clone https://github.com/davidsonfellipe/dotfiles.git && cd dotfiles && sh install.sh
 ```
 
 ## Git Aliases
