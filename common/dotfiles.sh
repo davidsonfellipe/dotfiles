@@ -39,3 +39,6 @@ if [ -f ".bash_profile" ]; then
     source ~/.bash_profile
     msg_alert "For use on this session, type: source ~/.bash_profile"
 fi
+
+# this file prevents the shell login message
+touch ~/.hushlogin
