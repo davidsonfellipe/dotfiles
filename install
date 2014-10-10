@@ -20,136 +20,17 @@ else
     ok "OK"
 fi
 
-# .ssh/config
-if [ -f "ssh/config" ]; then
-    msg_installing "~/.ssh/config"
-    cp ssh/config ~/.ssh/config
-fi
-
-# .gitconfig
-if [ -f "git/.gitconfig" ]; then
-    msg_installing "~/.gitconfig"
-    cp git/.gitconfig ~/.gitconfig
-fi
-
-# .editorconfig
-if [ -f ".editorconfig" ]; then
-    msg_installing "~/.editorconfig"
-    cp .editorconfig ~/.editorconfig
-fi
-
-# .osx
-if [ -f "osx/.osx" ]; then
-    msg_installing "~/.osx"
-    cp osx/.osx ~/.osx
-    killall Finder
-fi
-
-# .gitignore_global
-if [ -f "git/.gitignore_global" ]; then
-    msg_installing "~/.gitignore_global"
-    cp git/.gitignore_global ~/.gitignore_global
-    git config --global core.excludesfile ~/.gitignore_global
-fi
-
-# ln for Sublime
-if [ -f "/usr/local/bin/subl" ]; then
-    msg_checking "ln for Sublime"
-else
-    ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-fi
-
-# homebrew
-if which brew &> /dev/null; then
-    msg_checking "homebrew"
-else
-    msg_install "Homebrew" "git@github.com:mxcl/homebrew/wiki/installation"
-    /usr/bin/ruby -e "$(/usr/bin/curl -fsSL git@raw.github.com:mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
-    ok "OK"
-fi
+sh brew/global.sh
 
 sh node/global.sh
 
-# phantomjs
-if which phantomjs &> /dev/null; then
-    msg_checking "phantomjs"
-else
-    msg_install "phantomjs" "brew install phantomjs"
-    brew install phantomjs
-    msg_ok "OK"
-fi
+sh ruby/global.sh
 
-# update gems
-if which gem &> /dev/null; then
-    msg_checking "gem"
-    sudo gem update --system
-    echo "gem"
-fi
+sh sublime/global.sh
 
-# capistrano
-if which cap &> /dev/null; then
-    msg_checking "capistrano"
-else
-    msg_install "capistrano" "gem install capistrano"
-    sudo gem install capistrano
-    msg_ok "capistrano"
-fi
+sh common/dotfiles.sh
 
-# compass
-if which compass &> /dev/null; then
-    msg_checking "compass"
-else
-    msg_install "compass" "gem install compass"
-    sudo gem install compass
-    msg_ok "compass"
-fi
-
-# jekyll
-if which jekyll &> /dev/null; then
-    msg_checking "jekyll"
-else
-    msg_install "jekyll" "gem install jekyll"
-    sudo gem install jekyll
-    msg_ok "jekyll"
-fi
-
-# mongo
-if which mongod &> /dev/null; then
-    msg_checking "mongodb"
-else
-    msg_install "mongodb" "brew install mongodb"
-    brew install mongodb --with-openssl
-    msg_ok "OK"
-fi
-
-# .profile
-if [ -f ".bash_profile" ]; then
-    msg_installing ".bash_profile"
-    cp .bash_profile ~/.bash_profile
-    source ~/.bash_profile
-    msg_alert "For use on this session, type: source ~/.bash_profile"
-fi
-
-# clone the neobundle plugin, to manage vim plugins
-if [ ! -d "$HOME/.vim/bundle/neobundle.vim/.git" ]; then
-    msg_installing "Installing neobundle..."
-    git clone git@github.com:Shougo/neobundle.vim.git $HOME/.vim/bundle/neobundle.vim
-else
-    msg_ok "neobundle is already installed."
-fi
-
-# vim's plugins
-if [[ $OSX && `which vim 2> /dev/null` ]]; then
-
-    msg_installing "Installing/Updating vim's plugins..."
-    vim -f +NeoBundleInstall +qall
-
-    if [ $? -eq 0 ]; then
-        msg_ok "vim's plugins updated successfuly.";
-    else
-        msg_alert "We had a problem while updating vim's plugins.";
-    fi
-fi
+sh vim/global.sh
 
 # mysql
 sudo ln -s /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/lib/libmysqlclient.18.dylib
