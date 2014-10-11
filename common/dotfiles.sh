@@ -32,6 +32,12 @@ if [ -f "git/.gitignore_global" ]; then
     git config --global core.excludesfile ~/.gitignore_global
 fi
 
+# .git-completion
+if [ -f ".git-completion.bash" ]; then
+    msg_installing "~/.git-completion.bash"
+    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+fi
+
 # .profile
 if [ -f ".bash_profile" ]; then
     msg_installing ".bash_profile"
