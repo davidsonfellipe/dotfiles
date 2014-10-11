@@ -4,8 +4,8 @@ source common/functions.sh
 if which brew &> /dev/null; then
     msg_checking "homebrew"
 else
-    msg_install "Homebrew" "git@github.com:mxcl/homebrew/wiki/installation"
-    /usr/bin/ruby -e "$(/usr/bin/curl -fsSL git@raw.github.com:mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+    msg_install "Homebrew" "ruby -e $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ok "OK"
 fi
 
