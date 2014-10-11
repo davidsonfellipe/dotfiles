@@ -109,3 +109,7 @@ alias linecode-py='find . -name *.py | xargs wc -l'
 
 # Setting PATH for Python 2.7
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
