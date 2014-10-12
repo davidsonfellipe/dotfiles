@@ -41,5 +41,9 @@
     lll  = git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     rn = log -M
     short = shortlog -s -n
+    # Displays active users in the repository in the past 6 months
+    active = shortlog --numbered --summary --email --no-merges --since="6 months"
 [core]
     excludesfile = /Users/davidson/.gitignore_global
+[push]
+    default = simple
