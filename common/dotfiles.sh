@@ -46,6 +46,12 @@ if [ -f ".bash_profile" ]; then
     msg_alert "For use on this session, type: source ~/.bash_profile"
 fi
 
+# .inputrc
+if [ -f ".inputrc" ]; then
+    msg_installing ".inputrc"
+    sudo ln -s /Users/davidson/Dropbox/Labs/dotfiles/common/.inputrc ~/.inputrc
+fi
+
 # this file prevents the shell login message
 touch ~/.hushlogin
 
