@@ -25,6 +25,15 @@ else
     msg_ok "compass"
 fi
 
+# chunky_png
+if which chunky_png &> /dev/null; then
+    msg_checking "chunky_png"
+else
+    msg_install "chunky_png" "gem install chunky_png"
+    sudo gem install chunky_png
+    msg_ok "chunky_png"
+fi
+
 # jekyll
 if which jekyll &> /dev/null; then
     msg_checking "jekyll"
