@@ -53,3 +53,12 @@ else
     sudo npm install -g csslint
     msg_ok "OK"
 fi
+
+# TMI (Too Many Images) - discover your image weight on the web [alpha]
+if which tmi &> /dev/null; then
+    msg_checking "tmi"
+else
+    msg_install "tmi" "sudo npm install -g tmi"
+    npm install -g tmi
+    msg_ok "OK"
+fi
