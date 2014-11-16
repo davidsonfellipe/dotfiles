@@ -62,3 +62,13 @@ else
     npm install -g tmi
     msg_ok "OK"
 fi
+
+# bower
+if which bower &> /dev/null; then
+    msg_checking "bower"
+else
+    msg_install "bower" "npm install -g bower"
+    npm install -g bower
+    msg_ok "OK"
+fi
+
