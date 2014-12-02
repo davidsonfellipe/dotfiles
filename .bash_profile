@@ -113,3 +113,5 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:${PATH}"
