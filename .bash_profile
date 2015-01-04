@@ -35,7 +35,7 @@ alias dropbox='cd /Users/davidson/Dropbox'
 alias drive='cd /Users/davidson/Google Drive'
 alias jobs='cd /Users/davidson/Dropbox/jobs'
 alias labs='cd /Users/davidson/Dropbox/labs'
-alias keepfast='cd /Users/davidson/Dropbox/keepfast'
+alias keepfast='cd /Users/davidson/Dropbox/labs/keepfast'
 alias talks='cd /Users/davidson/Dropbox/talks'
 
 # others dirs
