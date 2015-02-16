@@ -102,6 +102,7 @@ export DYLD_LIBRARY_PATH="/usr/local/mysql/lib/"
 export VERSIONER_PYTHON_PREFER_64_BIT=no
 export VERSIONER_PYTHON_PREFER_32_BIT=yes
 export ARCHFLAGS="-arch x86_64"
+export GOPATH=$HOME/go
 
 # counter-line-code
 alias linecode-js='find . -name *.js | xargs wc -l'
