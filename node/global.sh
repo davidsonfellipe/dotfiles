@@ -63,6 +63,15 @@ else
     msg_ok "OK"
 fi
 
+# grunt-init
+if which grunt-init &> /dev/null; then
+    msg_checking "grunt-init"
+else
+    msg_install "grunt-init" "npm install -g grunt-init"
+    npm install -g grunt-init
+    msg_ok "OK"
+fi
+
 # bower
 if which bower &> /dev/null; then
     msg_checking "bower"
