@@ -79,11 +79,6 @@ export ESPORTES_PATH="/Users/davidson/Projetos/esportes"
 if [ -s "$HOME/.rvm/scripts/rvm" ]; then . "$HOME/.rvm/scripts/rvm"; fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# paths > virtualenv
-export WORKON_HOME="$HOME/.virtualenvs"
-source /usr/local/bin/virtualenvwrapper.sh
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-
 # colors
 export LSCOLORS="DxGxcxdxCxegedabagacad"
 
