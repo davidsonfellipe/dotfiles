@@ -65,7 +65,7 @@ alias mysqlstop='/usr/local/mysql/support-files/mysql.server stop'
 alias mysqlreload='mysqlstart && mysqlstop;'
 
 # postgres
-alias pgstart='postgres -D /usr/local/var/postgres'
+alias pgstart='postgres -D /postgres'
 
 # sublime editor
 export EDITOR="/usr/local/bin/subl"
