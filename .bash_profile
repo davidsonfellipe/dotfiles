@@ -44,9 +44,6 @@ alias projetos='cd /Users/davidson/Projetos'
 # mongo
 alias mongorun='mongod --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf &'
 
-# thumbor
-alias thumborrun='thumbor -c conf/setting_thumbor_local.py -p 8887 &'
-
 # spec
 alias specjs='rake spec:javascript'
 
@@ -115,3 +112,6 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:${PATH}"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
