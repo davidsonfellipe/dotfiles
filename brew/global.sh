@@ -9,15 +9,6 @@ else
     ok "OK"
 fi
 
-# phantomjs
-if which phantomjs &> /dev/null; then
-    msg_checking "phantomjs"
-else
-    msg_install "phantomjs" "brew install phantomjs"
-    brew install phantomjs
-    msg_ok "OK"
-fi
-
 # mongo
 if which mongod &> /dev/null; then
     msg_checking "mongodb"
@@ -26,3 +17,9 @@ else
     brew install mongodb --with-openssl
     msg_ok "OK"
 fi
+
+ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+sudo mkdir -p /data/db
+ls -ld /data/db/
+sudo chmod 0755 /data/db
+sudo chown mongod:mongod /data/db
