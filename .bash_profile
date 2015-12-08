@@ -70,7 +70,6 @@ export EDITOR="/usr/local/bin/subl"
 # paths > general
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:${PATH}"
-export ESPORTES_PATH="/Users/davidson/Projetos/esportes"
 
 # paths > rvm
 if [ -s "$HOME/.rvm/scripts/rvm" ]; then . "$HOME/.rvm/scripts/rvm"; fi
