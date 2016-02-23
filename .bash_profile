@@ -60,6 +60,10 @@ alias mysqlreload='mysqlstart && mysqlstop;'
 # postgres
 alias pgstart='postgres -D postgres/'
 
+# wheater
+alias weather-nyc='curl "http://wttr.in/New+York"'
+alias weather-rec='curl "http://wttr.in/Recife"'
+
 # sublime editor
 export EDITOR="/usr/local/bin/subl"
 
