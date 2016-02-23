@@ -43,9 +43,6 @@ alias projetos='cd /Users/davidson/Projetos'
 # mongo
 alias mongorun='mongod --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf &'
 
-# spec
-alias specjs='rake spec:javascript'
-
 # python
 alias pyclean='find . -name "*.pyc" -exec rm {} \;'
 alias pydist='python setup.py sdist upload -r ipypi'
