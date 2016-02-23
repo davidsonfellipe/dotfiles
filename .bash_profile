@@ -27,12 +27,10 @@ alias netlisteners='lsof -i -P | grep LISTEN'
 
 # sofwares
 alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
-alias rmpyc='find . -iname "*.pyc" -delete'
 
 # dropbox
 alias dotfiles='cd /Users/davidson/Dropbox/labs/dotfiles'
 alias dropbox='cd /Users/davidson/Dropbox'
-alias drive='cd /Users/davidson/Google Drive'
 alias jobs='cd /Users/davidson/Dropbox/jobs'
 alias labs='cd /Users/davidson/Dropbox/labs'
 alias talks='cd /Users/davidson/Dropbox/talks'
@@ -47,6 +45,7 @@ alias mongorun='mongod --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.co
 alias pyclean='find . -name "*.pyc" -exec rm {} \;'
 alias pydist='python setup.py sdist upload -r ipypi'
 alias pydev='python setup.py develop --no-deps'
+alias rmpyc='find . -iname "*.pyc" -delete'
 
 # processes
 alias tm='top -o vsize' # memory
