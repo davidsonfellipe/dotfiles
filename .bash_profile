@@ -60,7 +60,7 @@ alias mysqlreload='mysqlstart && mysqlstop;'
 alias pgstart='postgres -D postgres/'
 
 # bluetooth
-# Restart Bluetooth Daemon on Mac OS X without restarting
+# Restart Bluetooth Daemon on Mac OS X without restarting (Yosemite)
 alias blue-stop='sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
 alias blue-start='sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
 alias blue-reset='blue-stop && blue-start'
