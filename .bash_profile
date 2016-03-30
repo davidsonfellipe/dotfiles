@@ -61,8 +61,8 @@ alias pgstart='postgres -D postgres/'
 
 # bluetooth
 # Restart Bluetooth Daemon on Mac OS X without restarting
-alias blue-start='sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
-alias blue-stop='sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
+alias blue-stop='sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
+alias blue-start='sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
 alias blue-reset='blue-stop && blue-start'
 
 # wheater
