@@ -59,6 +59,12 @@ alias mysqlreload='mysqlstart && mysqlstop;'
 # postgres
 alias pgstart='postgres -D postgres/'
 
+# bluetooth
+# Restart Bluetooth Daemon on Mac OS X without restarting
+alias blue-start='sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
+alias blue-stop='sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
+alias blue-reset='blue-stop && blue-start'
+
 # wheater
 alias weather-nyc='curl "http://wttr.in/New+York"'
 alias weather-rec='curl "http://wttr.in/Recife"'
@@ -95,7 +101,6 @@ export DYLD_LIBRARY_PATH="/usr/local/mysql/lib/"
 export VERSIONER_PYTHON_PREFER_64_BIT=no
 export VERSIONER_PYTHON_PREFER_32_BIT=yes
 export ARCHFLAGS="-arch x86_64"
-export GOPATH=$HOME/go
 
 # counter-line-code
 alias linecode-js='find . -name *.js | xargs wc -l'
