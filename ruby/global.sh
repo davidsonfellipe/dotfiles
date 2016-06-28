@@ -4,7 +4,7 @@ source common/functions.sh
 if which gem &> /dev/null; then
     msg_checking "gem"
     sudo gem update --system
-    echo "gem"
+    msg_ok "gem"
 fi
 
 # capistrano

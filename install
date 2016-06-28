@@ -17,7 +17,7 @@ if [[ -d "$HOME/Dropbox/labs/dotfiles" ]]; then
 else
     msg_install "Cloning" "git@github.com:davidsonfellipe/dotfiles.git"
     git clone git@github.com:davidsonfellipe/dotfiles.git $HOME/dotfiles
-    ok "OK"
+    msg_ok "OK"
 fi
 
 sh brew/global.sh
