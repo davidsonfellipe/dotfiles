@@ -25,6 +25,7 @@
     clean-tags=for-each-ref --format="%(refname:short)" refs/tags/* | xargs git tag -d && git fetch --tags
     st = status -sb
     ci = commit -m
+    cp = cherry-pick
     br = branch
     df = diff
     lg = log -pgit ps
