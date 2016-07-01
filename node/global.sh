@@ -4,9 +4,9 @@ source common/functions.sh
 if which node &> /dev/null; then
     msg_checking "node"
 else
-    msg_install "node" "git clone git://github.com/ry/node.git"
+    msg_install "node" "brew install node"
     brew install node
-    echo "OK"
+    msg_ok "OK"
 fi
 
 # grunt-cli
@@ -15,7 +15,7 @@ if which grunt &> /dev/null; then
 else
     msg_install "grunt" "npm install -g grunt-cli"
     npm install -g grunt-cli
-    echo "OK"
+    msg_ok "OK"
 fi
 
 # vtop
@@ -24,7 +24,7 @@ if which vtop &> /dev/null; then
 else
     msg_install "vtop" "npm install vtop -g"
     npm install vtop -g
-    echo "OK"
+    msg_ok "OK"
 fi
 
 # jshint
@@ -33,7 +33,7 @@ if which jshint &> /dev/null; then
 else
     msg_install "jshint" "npm install jshint -g"
     npm install jshint -g
-    echo "OK"
+    msg_ok "OK"
 fi
 
 # csslint
