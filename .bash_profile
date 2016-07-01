@@ -71,6 +71,8 @@ export EDITOR="/usr/local/bin/subl"
 # paths > general
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:${PATH}"
+export PATH="./node_modules/.bin:$PATH"
+export NVM_DIR="path/to/nvm"
 
 # paths > rvm
 if [ -s "$HOME/.rvm/scripts/rvm" ]; then . "$HOME/.rvm/scripts/rvm"; fi
@@ -114,3 +116,6 @@ PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:${PATH}"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export NVM_DIR="/Users/davidson/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
