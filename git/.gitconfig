@@ -47,6 +47,7 @@
     active = shortlog --numbered --summary --email --no-merges --since="6 months"
 [core]
 	excludesfile = /Users/davidson/.gitignore_global
+    editor = "/usr/bin/subl"
 [push]
     default = simple
 [filter "media"]
