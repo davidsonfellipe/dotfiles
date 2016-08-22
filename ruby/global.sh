@@ -16,15 +16,6 @@ else
     msg_ok "capistrano"
 fi
 
-# compass
-if which compass &> /dev/null; then
-    msg_checking "compass"
-else
-    msg_install "compass" "gem install compass"
-    sudo gem install compass
-    msg_ok "compass"
-fi
-
 # chunky_png
 if which chunky_png &> /dev/null; then
     msg_checking "chunky_png"
