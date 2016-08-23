@@ -2,8 +2,6 @@
 alias ls='ls -G'
 alias la='ls -la'
 alias ll='ls -l'
-alias lw='ls -l'
-alias lqq='ls -l'
 alias cl='clear'
 alias home='cd ~'
 alias rt='reset'
@@ -24,9 +22,6 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias iplocal='ipconfig getifaddr en1'
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 alias netlisteners='lsof -i -P | grep LISTEN'
-
-# sofwares
-alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
 
 # dropbox
 alias dotfiles='cd /Users/davidson/Dropbox/labs/dotfiles'
@@ -56,7 +51,7 @@ alias mysqlreload='mysqlstart && mysqlstop;'
 alias pgstart='postgres -D postgres/'
 
 # bluetooth
-# Restart Bluetooth Daemon on Mac OS X without restarting (Yosemite)
+# restart bluetooth daemon on macOSX without restarting (yosemite)
 alias blue-stop='sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
 alias blue-start='sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport'
 alias blue-reset='blue-stop && blue-start'
