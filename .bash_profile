@@ -113,4 +113,4 @@ PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:${PATH}"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export NVM_DIR="/Users/davidson/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
