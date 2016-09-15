@@ -45,6 +45,15 @@ else
     msg_ok "OK"
 fi
 
+# jsinspect
+if which jsinspect &> /dev/null; then
+    msg_checking "jsinspect"
+else
+    msg_install "jsinspect" "npm install -g jsinspect"
+    npm install -g jsinspect
+    msg_ok "OK"
+fi
+
 # TMI (Too Many Images) - discover your image weight on the web
 if which tmi &> /dev/null; then
     msg_checking "tmi"

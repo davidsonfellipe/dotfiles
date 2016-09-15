@@ -47,6 +47,9 @@ alias mysqlstart='/usr/local/mysql/support-files/mysql.server start'
 alias mysqlstop='/usr/local/mysql/support-files/mysql.server stop'
 alias mysqlreload='mysqlstart && mysqlstop;'
 
+#js
+alias js-duplicate='jsinspect -t 30 -i '
+
 # postgres
 alias pgstart='postgres -D postgres/'
 
