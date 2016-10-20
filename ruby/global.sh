@@ -7,15 +7,6 @@ if which gem &> /dev/null; then
     msg_ok "gem"
 fi
 
-# capistrano
-if which cap &> /dev/null; then
-    msg_checking "capistrano"
-else
-    msg_install "capistrano" "gem install capistrano"
-    sudo gem install capistrano
-    msg_ok "capistrano"
-fi
-
 # chunky_png
 if which chunky_png &> /dev/null; then
     msg_checking "chunky_png"
