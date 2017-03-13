@@ -26,8 +26,8 @@ alias netlisteners='lsof -i -P | grep LISTEN'
 # dropbox
 alias dotfiles='cd /Users/davidson/Dropbox/labs/dotfiles'
 alias dropbox='cd /Users/davidson/Dropbox'
-alias jobs='cd /Users/davidson/Dropbox/jobs'
 alias labs='cd /Users/davidson/Dropbox/labs'
+alias webapp='cd /Users/davidson/projects/web'
 
 # mongo
 alias mongorun='mongod --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf &'
