@@ -4,5 +4,5 @@ source common/functions.sh
 if [ -f "/usr/local/bin/subl" ]; then
     msg_checking "ln for Sublime"
 else
-    ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+    ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 fi
