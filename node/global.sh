@@ -54,15 +54,6 @@ else
     msg_ok "OK"
 fi
 
-# TMI (Too Many Images) - discover your image weight on the web
-if which tmi &> /dev/null; then
-    msg_checking "tmi"
-else
-    msg_install "tmi" "npm install -g tmi"
-    npm install -g tmi
-    msg_ok "OK"
-fi
-
 # bower
 if which bower &> /dev/null; then
     msg_checking "bower"
