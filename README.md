@@ -45,19 +45,27 @@ $ git short ~ git shortlog -s -n
 .gitignore_global ✔
 ```
 
-## Gems e etc...
+## Miscellaneous
 
 ```
-=> homebrew ✔
 => node ✔
-=> npm ✔
+=> grunt ✔
+=> vtop ✔
 => jshint ✔
 => csslint ✔
-=> phantomjs ✔
+=> jsinspect ✔
+=> tmi ✔
+=> grunt-init ✔
+=> bower ✔
+=> bower-installer ✔
+=> jscodeshift ✔
+=> eslint ✔
 => gem ✔
-=> compass ✔
+==> gem installed ✔
+==> chunky_png [installing]: $ gem install chunky_png
+==> chunky_png installed ✔
 => jekyll ✔
-=> mongodb ✔
+=> ln for Sublime ✔
 ```
 
 ## License
