@@ -89,3 +89,12 @@ else
     npm install -g bower-installer
     msg_ok "OK"
 fi
+
+# jscodeshift
+if which jscodeshift &> /dev/null; then
+    msg_checking "jscodeshift"
+else
+    msg_install "jscodeshift" "npm install -g jscodeshift"
+    npm install -g jscodeshift
+    msg_ok "OK"
+fi
