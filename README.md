@@ -55,7 +55,6 @@ $ git short ~ git shortlog -s -n
 => csslint ✔
 => phantomjs ✔
 => gem ✔
-=> capistrano ✔
 => compass ✔
 => jekyll ✔
 => mongodb ✔
