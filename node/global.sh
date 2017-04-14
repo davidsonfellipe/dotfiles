@@ -107,3 +107,12 @@ else
     npm install -g eslint
     msg_ok "OK"
 fi
+
+# pakmanager
+if which pakmanager &> /dev/null; then
+    msg_checking "pakmanager"
+else
+    msg_install "pakmanager" "npm install -g pakmanager"
+    npm install -g pakmanager
+    msg_ok "OK"
+fi
