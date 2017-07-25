@@ -56,8 +56,6 @@ $ git short ~ git shortlog -s -n
 => jsinspect ✔
 => tmi ✔
 => grunt-init ✔
-=> bower ✔
-=> bower-installer ✔
 => jscodeshift ✔
 => eslint ✔
 => gem ✔
