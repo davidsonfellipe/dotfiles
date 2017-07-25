@@ -89,6 +89,8 @@ export LC_ALL=en_US.UTF-8
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
 
+export TTC_GITBOT='gitlog'
+
 ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
 
 PATH="/usr/local/mysql/bin:${PATH}"
@@ -117,3 +119,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export NVM_DIR="/Users/davidson/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+export MANPATH="/opt/local/share/man:$MANPATH"
+
+source /usr/local/bin/virtualenvwrapper.sh
