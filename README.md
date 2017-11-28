@@ -45,27 +45,6 @@ $ git short ~ git shortlog -s -n
 .gitignore_global ✔
 ```
 
-## Miscellaneous
-
-```
-=> node ✔
-=> grunt ✔
-=> vtop ✔
-=> jshint ✔
-=> csslint ✔
-=> jsinspect ✔
-=> tmi ✔
-=> grunt-init ✔
-=> jscodeshift ✔
-=> eslint ✔
-=> gem ✔
-==> gem installed ✔
-==> chunky_png [installing]: $ gem install chunky_png
-==> chunky_png installed ✔
-=> jekyll ✔
-=> ln for Sublime ✔
-```
-
 ## License
 
 Code is under [MIT](http://davidsonfellipe.mit-license.org) license and content is under [Creative Commons BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
