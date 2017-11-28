@@ -71,6 +71,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:${PATH}"
 export PATH="./node_modules/.bin:$PATH"
 export NVM_DIR="path/to/nvm"
+export PGHOST=localhost
 
 # paths > rvm
 if [ -s "$HOME/.rvm/scripts/rvm" ]; then . "$HOME/.rvm/scripts/rvm"; fi
@@ -113,6 +114,8 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:${PATH}"
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
