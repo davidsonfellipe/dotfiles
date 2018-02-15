@@ -73,10 +73,6 @@ export PATH="./node_modules/.bin:$PATH"
 export NVM_DIR="path/to/nvm"
 export PGHOST=localhost
 
-# paths > rvm
-if [ -s "$HOME/.rvm/scripts/rvm" ]; then . "$HOME/.rvm/scripts/rvm"; fi
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # colors
 export LSCOLORS="DxGxcxdxCxegedabagacad"
 
@@ -89,8 +85,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
-
-export TTC_GITBOT='gitlog'
 
 ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
 
@@ -126,5 +120,6 @@ export NVM_DIR="/Users/davidson/.nvm"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 export MANPATH="/opt/local/share/man:$MANPATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source /usr/local/bin/virtualenvwrapper.sh
+export PATH=~/.npm-global/bin:$PATH

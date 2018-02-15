@@ -27,24 +27,6 @@ else
     msg_ok "OK"
 fi
 
-# jshint
-if which jshint &> /dev/null; then
-    msg_checking "jshint"
-else
-    msg_install "jshint" "npm install jshint -g"
-    npm install jshint -g
-    msg_ok "OK"
-fi
-
-# csslint
-if which csslint &> /dev/null; then
-    msg_checking "csslint"
-else
-    msg_install "csslint" "npm install -g csslint"
-    npm install -g csslint
-    msg_ok "OK"
-fi
-
 # jsinspect
 if which jsinspect &> /dev/null; then
     msg_checking "jsinspect"
