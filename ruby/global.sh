@@ -15,12 +15,3 @@ else
     sudo gem install chunky_png
     msg_ok "chunky_png"
 fi
-
-# jekyll
-if which jekyll &> /dev/null; then
-    msg_checking "jekyll"
-else
-    msg_install "jekyll" "gem install jekyll"
-    sudo gem install jekyll
-    msg_ok "jekyll"
-fi
