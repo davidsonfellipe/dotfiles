@@ -45,15 +45,6 @@ else
     msg_ok "OK"
 fi
 
-# eslint
-if which eslint &> /dev/null; then
-    msg_checking "eslint"
-else
-    msg_install "eslint" "npm install -g eslint"
-    npm install -g eslint
-    msg_ok "OK"
-fi
-
 # pakmanager
 if which pakmanager &> /dev/null; then
     msg_checking "pakmanager"
