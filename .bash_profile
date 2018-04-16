@@ -19,7 +19,7 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # net
 alias whois='whois -h whois-servers.net'
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias iplocal='ipconfig getifaddr en1'
+alias iplocal='ipconfig getifaddr en0'
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 alias netlisteners='lsof -i -P | grep LISTEN'
 
@@ -107,7 +107,7 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:${PATH}"
+PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:${PATH}"
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
