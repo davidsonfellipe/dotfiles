@@ -63,9 +63,6 @@ alias blue-reset='blue-stop && blue-start'
 alias weather-nyc='curl "http://wttr.in/New+York"'
 alias weather-rec='curl "http://wttr.in/Recife"'
 
-# sublime editor
-export EDITOR="/usr/local/bin/subl"
-
 # paths > general
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:${PATH}"
@@ -111,7 +108,7 @@ PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:${PATH}"
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-### Added by the Heroku Toolbelt
+### Add Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export NVM_DIR="/Users/davidson/.nvm"
@@ -123,3 +120,6 @@ export MANPATH="/opt/local/share/man:$MANPATH"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=~/.npm-global/bin:$PATH
+
+# Add Visual Studio Code (code)
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}

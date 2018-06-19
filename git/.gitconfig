@@ -46,19 +46,19 @@
     # Displays active users in the repository in the past 6 months
     active = shortlog --numbered --summary --email --no-merges --since="6 months"
 [core]
-	excludesfile = /Users/davidson/.gitignore_global
-    editor = "/usr/bin/subl"
+    excludesfile = /Users/davidson/.gitignore_global
+    editor = "code"
 [push]
     default = simple
 [filter "media"]
     required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+    clean = git media clean %f
+    smudge = git media smudge %f
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
