@@ -42,10 +42,6 @@ alias rmpyc='find . -iname "*.pyc" -delete'
 alias tm='top -o vsize' # memory
 alias tu='top -o cpu' # cpu
 
-# mysql
-alias mysqlstart='/usr/local/mysql/support-files/mysql.server start'
-alias mysqlstop='/usr/local/mysql/support-files/mysql.server stop'
-
 #js
 alias js-duplicate='jsinspect -t 30 -i '
 
