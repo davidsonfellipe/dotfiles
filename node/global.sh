@@ -9,15 +9,6 @@ else
     msg_ok "OK"
 fi
 
-# grunt-cli
-if which grunt &> /dev/null; then
-    msg_checking "grunt"
-else
-    msg_install "grunt" "npm install -g grunt-cli"
-    npm install -g grunt-cli
-    msg_ok "OK"
-fi
-
 # vtop
 if which vtop &> /dev/null; then
     msg_checking "vtop"
