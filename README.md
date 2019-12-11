@@ -1,6 +1,7 @@
 # My dotfiles
 
-![Screen](http://f.cl.ly/items/3O0i2I1f080A2v1k330t/Screen%20Shot%202013-10-07%20at%201.41.00%20AM.png)
+<img width="1393" alt="Screen Shot 2019-12-10 at 11 21 04 PM" src="https://user-images.githubusercontent.com/381179/70591329-c8297200-1ba3-11ea-8c2b-eb829230069f.png">
+
 
 ## How to run
 
