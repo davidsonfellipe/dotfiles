@@ -1,11 +1,25 @@
 source common/functions.sh
 
+
+
+# nvm
+if [ -f "/Users/davidson/.nvm" ]; then
+    msg_installing "~/.nvm"
+    export NVM_DIR="$HOME/.nvm" && (
+    git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+    cd "$NVM_DIR"
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+    ) && \. "$NVM_DIR/nvm.sh"
+fi
+
 # nodejs
 if which node &> /dev/null; then
     msg_checking "node"
 else
-    msg_install "node" "brew install node"
-    brew install node
+    msg_install "node" "nvm alias default node"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    nvm install --lts
+    nvm use default
     msg_ok "OK"
 fi
 

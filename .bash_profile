@@ -60,7 +60,6 @@ alias weather-rec='curl "http://wttr.in/Recife"'
 
 # paths > general
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-export PATH="/usr/local/share/npm/bin:${PATH}"
 export PATH="./node_modules/.bin:$PATH"
 export NVM_DIR="path/to/nvm"
 export PGHOST=localhost
@@ -71,17 +70,8 @@ export LSCOLORS="DxGxcxdxCxegedabagacad"
 # prompt
 export PS1='\[\033[01;32m\]➜  \[\033[01;31m\]\w\[\033[00m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo "\[\033[01;33m\] ($(git branch | grep ^*|sed s/\*\ //))\[\033[00m\]"; fi) $ '
 
-# mysql
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export CFLAGS=-Qunused-arguments
-export CPPFLAGS=-Qunused-arguments
-
 ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
 
-PATH="/usr/local/mysql/bin:${PATH}"
-export PATH
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib/"
 export VERSIONER_PYTHON_PREFER_64_BIT=no
 export VERSIONER_PYTHON_PREFER_32_BIT=yes
@@ -106,15 +96,15 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 ### Add Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export NVM_DIR="/Users/davidson/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+export PATH="~/terraform:$PATH"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 export MANPATH="/opt/local/share/man:$MANPATH"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH=~/.npm-global/bin:$PATH
 
 # Add Visual Studio Code (code)
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}

@@ -22,10 +22,6 @@ fi
 
 sh brew/global.sh
 
-sh node/global.sh
-
-sh bpkg/global.sh
-
-sh ruby/global.sh
-
 sh common/dotfiles.sh
+
+sh node/global.sh
