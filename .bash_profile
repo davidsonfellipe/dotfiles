@@ -91,8 +91,6 @@ fi
 
 PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:${PATH}"
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
 ### Add Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -108,3 +106,10 @@ export MANPATH="/opt/local/share/man:$MANPATH"
 
 # Add Visual Studio Code (code)
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+# Pyenv
+# if which pyenv > /dev/null; then curl https://pyenv.run | bash fi
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

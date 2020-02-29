@@ -27,6 +27,8 @@ else
     msg_ok "OK"
 fi
 
+brew install pyenv-virtualenv
+
 sudo mkdir -p /data/db
 ls -ld /data/db/
 sudo chmod 0755 /data/db
