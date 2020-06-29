@@ -58,3 +58,18 @@ else
     npm install -g pakmanager
     msg_ok "OK"
 fi
+
+# cpulimit
+if which cpulimit &> /dev/null; then
+    msg_checking "cpulimit"
+else
+    msg_install "cpulimit" "npm install -g cpulimit"
+    npm install -g cpulimit
+    msg_ok "OK"
+fi
+
+# commitizen
+msg_install "commitizen" "npm install -g commitizen"
+npm install -g commitizen
+msg_ok "OK"
+
