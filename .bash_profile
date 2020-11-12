@@ -29,9 +29,6 @@ alias dropbox='cd /Users/davidson/Dropbox'
 alias labs='cd /Users/davidson/Dropbox/labs'
 alias webapp='cd /Users/davidson/projects/web'
 
-# mongo
-alias mongorun='mongod --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf &'
-
 # python
 alias pyclean='find . -name "*.pyc" -exec rm {} \;'
 alias pydist='python setup.py sdist upload -r ipypi'
